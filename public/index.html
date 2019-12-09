@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CEFET/RJ Controle Digital 2019.2</title>
+<!--
+ <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+-->
+
+    <link rel="stylesheet" href="css/style.css"></link>
+
+  <!-- Material Design Lite -->
+<!--
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    
+    <link rel="stylesheet" href="main.css">
+-->
+  
+  </head>
+    <body>
+      <div>
+        <h1 class="centered">[CEFET/RJ] Controle Digital - 2019.2</h1>        
+      </div>
+      
+      <div class="chart-container wb centered">
+        <canvas id="canvas"> </canvas>
+      </div>
+      
+      <div class="container centered">
+        <p>
+          <span class="varName">Setpoint&nbsp</span><span id="text_sp">0</span>
+          &nbsp&nbsp&nbsp&nbsp&nbsp
+           <span class="varName">Range&nbsp</span><span id="text_range">60</span>
+        </p>
+        <p>
+          <input type="range" id="points" value="0" min="0" max="100"></input>
+          <input type="range" id="chartRange" value="60" min="10" max="100"></input>
+        </p>
+        
+        
+        <input type="button" id="button_setpoint" value="New Setpoint" onclick=newSetPoint()></input></p>
+        <input type="button" id="button_reset" value="Reset Data" onclick=resetData()></input>
+      </div>
+      
+      <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+      
+      <script src="js/utils.js"></script>
+      <script src="js/chart.js"></script>
+      <script src="js/firebase.js"></script>
+      <script src="js/app.js"></script>
+    </body>
+        
+</html>

@@ -1,0 +1,55 @@
+.wb {
+  border: 1px solid white;
+}
+
+.centered {
+  text-align:center;
+}
+
+.left {
+  text-align:left;
+}
+
+.right {
+  text-align:right;
+}
+body {
+  background-color:#272822;
+}
+
+h1, h2, h3, h4 {
+  color:#cb2760;
+}
+
+p {
+  color:#f8f8f2;
+}
+
+a {
+  color:#e6db74;
+}
+
+.varName {
+  color:#a6e22e;
+}
+
+.chart-container {
+  padding: 10;
+  position: relative;
+  margin: auto;
+  height: 80vh;
+  width: 80vw;
+}
+
+/*
+canvas {
+  max-width:75%;
+  height:auto;
+  margin:auto;
+  padding:10px;
+}
+*/
+
+@media screen and (max-width: 600px){
+   
+}
